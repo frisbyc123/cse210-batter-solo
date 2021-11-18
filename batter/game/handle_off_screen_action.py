@@ -26,4 +26,3 @@ class HandleOffScreenAction(Action):
                     if actor._position.get_y() > MAX_Y:
                         cast["balls"].remove(actor)
                         print("killed ball")
-
