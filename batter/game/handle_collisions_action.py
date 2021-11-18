@@ -5,8 +5,12 @@ from game.action import Action
 from game.point import Point
 from game.physics_service import PhysicsService
 from game.audio_service import AudioService
+import random
 
 class HandleCollisionsAction(Action):
+    """
+    Handles collisions of the ball with a brick or with the paddle
+    """
     
     def __init__(self, physics_service):
         super().__init__()
