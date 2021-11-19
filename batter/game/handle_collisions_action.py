@@ -9,15 +9,18 @@ import random
 
 class HandleCollisionsAction(Action):
     """
-    Handles collisions of the ball with a brick or with the paddle
+    Handles collisions of the between actors
     """
     
+    # Initializtion #
     def __init__(self, physics_service):
         super().__init__()
         self._physics_service = physics_service
         self.audio_service = AudioService()
         
-
+    # checks if the ball and paddle have colided, then multiplies the ball's y velocity by -1 
+    # Then checks if the ball has collided with a brick.  If it does, it deletes the brick and
+    # bounces the ball back
     def execute(self, cast):
         ball = cast["balls"][0]
         paddle = cast["paddle"][0]

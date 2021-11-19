@@ -3,6 +3,9 @@ from game.action import Action
 from game.point import Point
 
 class MoveActorsAction(Action):
+    """
+    Moves actors according to their velocity.
+    """
     def __init__(self, output_service):
 
         self._output_service = output_service
@@ -15,8 +18,7 @@ class MoveActorsAction(Action):
     
     def _move_actor(self, actor):
         """Moves the given actor to its next position according to its 
-        velocity. Will wrap the position from one side of the screen to the 
-        other when it reaches the edge in either direction.
+        velocity.
         
         Args:
             actor (Actor): The actor to move.

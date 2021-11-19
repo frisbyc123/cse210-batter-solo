@@ -3,6 +3,9 @@ from game.point import Point
 import random
 
 class Ball(Actor):
+    """
+    Instance of actor.  Used to track the ball.  Selects a random x velocity at startup, and set the actor type as "ball"
+    """
 
     # initialization *
     def __init__(self):
